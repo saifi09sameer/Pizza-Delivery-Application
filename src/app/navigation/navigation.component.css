@@ -1,0 +1,13 @@
+
+.button-line {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  overflow-x: auto;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+#icon{
+  margin-left: 680px;
+}

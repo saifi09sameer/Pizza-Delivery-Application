@@ -1,0 +1,25 @@
+<div class="container my-4">
+    <table class="table table-striped mx-auto" style="border: 2px solid black;">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Address</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.userName }}</td>
+          <td>{{ user.userEmail }}</td>
+          <td>{{ user.userPhoneNumber }}</td>
+          <td>{{ user.userAddress }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteUser(user)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+  

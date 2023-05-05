@@ -1,0 +1,27 @@
+<mat-card class="example-card" style="margin-bottom: 20px;">
+  <table style="border: 1px solid black; margin: 0 auto; margin-left: 20px; margin-right: 20px;">
+    <thead>
+      <tr>
+        <th>Item Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Rating</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let card of cards">
+        <td>{{card.itemName}}</td>
+        <td>{{card.itemDescription}}</td>
+        <td>{{card.itemPrice}}</td>
+        <td>{{card.itemRating}}</td>
+       
+        <td>
+          <button (click)="deleteCard(card.itemNumber)" mat-button color="primary">Delete Card</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h1 style="text-align: center;">TotalAmount : {{totalAmount}}</h1>
+  <button (click)="OrderNow()" mat-button color="primary">Order Now</button>
+</mat-card>

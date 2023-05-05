@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="card shadow">
+          <div class="card-header">
+            <h3>All Users with Amount</h3>
+          </div>
+          <div class="card-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Email</th>
+                  <th>Total Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let user of allData | keyvalue">
+                  <td>{{ user.key }}</td>
+                  <td>{{ user.value }}</td>
+                </tr>
+              </tbody>
+            </table>
+            <h1>Total Amount - {{totalAmount}}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

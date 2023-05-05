@@ -1,0 +1,25 @@
+.title h1{
+    color:rgb(3, 91, 91);
+    padding-top: 80px;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+
+}
+.buttonStyle {
+    padding-bottom: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.buttonStyle button {
+    width: 180px;
+    height: 80px;
+    margin: 0 20px;
+    background-color: #d6490c;
+    color: white;
+    font-size: 24px;
+    border-radius: 10px;
+}

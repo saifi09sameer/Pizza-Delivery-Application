@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <div class="total-amount">
+      <h2>Total Amount: {{totalAmount}}</h2>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2">
+      <div class="col mb-4" *ngFor="let order of orders; let i = index">
+        <div class="card">
+          <div class="card-header">Order ID: {{ order.orderID }}</div>
+          <div class="card-body">
+            <h5 class="card-title">Menu List</h5>
+            <ul class="list-group">
+              <li class="list-group-item" *ngFor="let menu of order.menuList; let j = index">
+                {{ menu.itemName }} - {{ menu.itemPrice }}
+              </li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            Total Amount: {{ order.totalAmount }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

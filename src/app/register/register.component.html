@@ -1,0 +1,55 @@
+<form [formGroup]="userForm">
+  <div class="card">
+    <div class="card-header">
+      <h2>Registration</h2>
+    </div>
+    <div class="card-body">
+
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="userName" 
+         placeholder="Enter Name" formControlName="userName">
+        <label for="floatingInput">User Name</label>
+        <div *ngIf="userForm.controls['userName'].invalid && userForm.controls['userName'].touched" class="text-danger">
+          User Name is required
+        </div>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="userEmail" 
+        placeholder="name@example.com" formControlName="userEmail">
+        <label for="floatingInput">Email address</label>
+        <div *ngIf="userForm.controls['userEmail'].invalid &&  userForm.controls['userEmail'].touched" class="text-danger">
+          Valid Email address is required
+        </div>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="password" class="form-control" id="userPassword" 
+        placeholder="Password" formControlName="userPassword">
+        <label for="floatingPassword">Password</label>
+        <div *ngIf="userForm.controls['userPassword'].invalid &&  userForm.controls['userPassword'].touched" class="text-danger">
+          Password is required
+        </div>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="userPhoneNumber" 
+        placeholder="123-456-7890"
+        formControlName="userPhoneNumber" required>
+        <label for="userPhoneNumber">Phone number</label>
+        <div *ngIf="userForm.controls['userPhoneNumber'].invalid && userForm.controls['userPhoneNumber'].touched" class="text-danger">
+          Valid Phone number is required
+        </div>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="userAddress" 
+        placeholder="Address" formControlName="userAddress">
+        <label for="floatingPassword">Address</label>
+        <div *ngIf="userForm.controls['userAddress'].invalid && userForm.controls['userAddress'].touched" class="text-danger">
+          Valid Phone number is required
+        </div>
+      </div>
+      <button (click)="signUP()" type="submit" class="btn btn-primary">Submit</button>
+      <button routerLink="/login" type="submit" class="btn btn-primary"><-- Back</button>
+    </div>
+  </div>
+</form>
